@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>Алгоритм компоновки</title>
+</head>
+<body>
+    <div class="body">
+        <div class="main">
+            <div class="article">
+                <canvas id="c1" width="500" height="500"></canvas>
+            </div>
+        </div>
+        <div class="aside">
+            <div class="input-block">
+                <div class="label">Выбрать JSON с графом:</div>
+                <input  class="btn" type="file" id="files">
+            </div>
+
+            <div class="input-block">
+                <input type="text" data-role="grSize1" placeholder="Размерность" tabindex="0">
+            </div>
+            <div class="input-block">
+                <input type="text" data-role="grSize2" placeholder="Размерность (вторая доля)" tabindex="0">
+                <label for="double-graph">Двудольный граф</label>
+                <input type="checkbox" data-role="hasSecond" id="double-graph" tabindex="0">
+            </div>
+            <div class="input-block">
+                <input type="text" data-role="edgeProb" placeholder="Вероятность" tabindex="0">
+                <div class="btn" data-role="genGr" tabindex="0">Сгенерировать граф</div>
+            </div>
+
+            <div class="input-block">
+                <div class="btn" data-role="resetTransform" tabindex="0">Вернуть граф к началу</div>
+            </div>
+            <div class="input-block">
+                <div class="btn" data-role="fullClear" tabindex="0">Очистить</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/graph_drawer.js"></script>
+    <script src="/static/compon_graph.js"></script>
+</body>
+</html>
